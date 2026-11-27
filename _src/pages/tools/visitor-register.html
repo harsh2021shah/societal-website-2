@@ -1,0 +1,34 @@
+<!--{ "out": "free-tools/visitor-register/index.html", "nav": "tools", "title": "Visitor Register Template", "description": "Free printable visitor register template for housing society gates, designed with residents’ privacy in mind.", "scripts": ["tools.js"] }-->
+{{toolHero:visitor-register}}
+
+        <section class="pt-40">
+            <div class="container">
+                <div class="sp-tool-shell" id="tool-visitor">
+                    <div class="row mt-none-30">
+                        <div class="col-lg-4 mt-30 sp-no-print">
+                            <div class="sp-field"><label for="vr-soc">Society name</label><input id="vr-soc" type="text" value="Green Park Co-operative Housing Society"></div>
+                            <div class="sp-field"><label for="vr-gate">Gate / wing</label><input id="vr-gate" type="text" value="Main gate"></div>
+                            <div class="sp-field"><label for="vr-rows">Rows per page</label><select id="vr-rows"><option>15</option><option selected>20</option><option>25</option></select></div>
+                            <div class="sp-field"><span class="sp-label">Optional columns</span>
+                                <label class="d-flex gap-2 align-items-center fw-normal mb-2"><input type="checkbox" id="vr-vehicle" checked> Vehicle number</label>
+                                <label class="d-flex gap-2 align-items-center fw-normal mb-2"><input type="checkbox" id="vr-phone"> Phone (last 4 digits only)</label>
+                                <label class="d-flex gap-2 align-items-center fw-normal"><input type="checkbox" id="vr-count" checked> Number of visitors</label>
+                            </div>
+                            <div class="sp-result" style="padding:22px">
+                                <div class="sp-result-label mb-10"><i class="fa-solid fa-user-shield"></i> Privacy tips</div>
+                                <ul class="list-unstyled mb-0" style="font-size:14.5px">
+                                    <li class="mb-2">Collect only what you need. Avoid full phone numbers and ID numbers.</li>
+                                    <li class="mb-2">Keep filled registers with the Secretary, not at an open desk.</li>
+                                    <li>Decide how long to keep old pages, and dispose of them securely.</li>
+                                </ul>
+                            </div>
+                            <button type="button" class="sp-btn w-100 mt-20" id="vr-print"><i class="fa-solid fa-print"></i> Print register</button>
+                        </div>
+                        <div class="col-lg-8 mt-30">
+                            <div class="sp-doc sp-printable" id="vr-doc"></div>
+                        </div>
+                    </div>
+                </div>
+{{toolFooter:visitor-register|Digital visitor logs, Secretary-only.|SocietalPro keeps gate records digital and restricted to the Secretary. Safe, searchable and respectful of privacy.}}
+            </div>
+        </section>

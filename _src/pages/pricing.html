@@ -1,0 +1,46 @@
+<!--{ "out": "pricing/index.html", "nav": "pricing", "title": "Pricing", "description": "Straightforward SocietalPro plans in Indian rupees, based on the number of residents. Every plan includes monthly text and voice credits." }-->
+{{hero {"title": "A clearer society at a clear price.", "lead": "Choose a plan based on the number of residents. Every plan includes monthly text and voice credits.", "crumbs": [["Pricing"]]} }}
+
+        <section class="pricing pt-40">
+            <div class="container">
+                <div class="row mt-none-30 justify-content-center">{{pricingCards}}</div>
+                <p class="sp-price-note">Prices in Indian rupees. Applicable taxes shown at checkout. Credit allowances renew monthly.<br>Not sure which plan fits? <a class="sp-link" href="/contact/">Talk to us</a>.</p>
+            </div>
+        </section>
+
+        <section class="pt-120">
+            <div class="container">
+                <div class="sec-title sec-title--two text-center mb-50">
+                    <span class="sp-eyebrow">Compare plans</span>
+                    <h2 class="title">Every plan, the same open toolkit.</h2>
+                    <p class="sp-lead mx-auto mt-20">Plans differ by society size and credits. Transparency features are never locked behind a bigger plan.</p>
+                </div>
+                {{compareTable}}
+            </div>
+        </section>
+
+        <section class="faq pt-130">
+            <div class="container">
+                <div class="xb-faq-wrapper pos-rel">
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <div class="xb-faq-left">
+                                <div class="sec-title sec-title--two"><h2 class="title">Pricing questions</h2></div>
+                                <p class="xb-content">Ask us anything about plans, credits or setup. We’ll answer plainly.</p>
+                                <div class="xb-faq-btn">
+                                    <a class="thm-btn desk-btn desk-btn--gradient" data-split-link="" aria-label="Contact us" href="/contact/">
+                                        <div class="layer"><div class="inner"><div class="text" data-link-shadow="">Contact us</div></div></div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-7">
+                            <div class="xb-faq xb-desk-faq">
+                                <ul class="accordion_box clearfix list-unstyled">{{faq:pricing}}</ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        {{faqSchema:pricing}}

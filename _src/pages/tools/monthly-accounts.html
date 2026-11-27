@@ -1,0 +1,52 @@
+<!--{ "out": "free-tools/monthly-accounts/index.html", "nav": "tools", "title": "Monthly Society Accounts Template", "description": "Free monthly accounts template for housing societies. Fill in income and expenses with notes, then print, save as PDF or download as CSV to share with members.", "scripts": ["tools.js"] }-->
+{{toolHero:monthly-accounts}}
+
+        <section class="pt-40">
+            <div class="container">
+                <div class="sp-tool-shell" id="tool-accounts">
+                    <div class="row sp-no-print">
+                        <div class="col-md-5"><div class="sp-field"><label for="ma-soc">Society name</label><input id="ma-soc" type="text" placeholder="Green Park Co-operative Housing Society"></div></div>
+                        <div class="col-md-3"><div class="sp-field"><label for="ma-month">Month</label><input id="ma-month" type="month"></div></div>
+                        <div class="col-md-4"><div class="sp-field"><label for="ma-open">Opening balance</label><div class="sp-input-group"><span class="prefix">₹</span><input id="ma-open" type="number" inputmode="decimal" value="0"></div></div></div>
+                    </div>
+
+                    <div class="sp-printable" id="ma-print">
+                        <div class="d-none d-print-block mb-3">
+                            <h2 id="ma-print-title" style="font-size:22px;margin:0"></h2>
+                            <p id="ma-print-sub" class="mb-0"></p>
+                        </div>
+                        <div class="sp-summary-tiles mb-30">
+                            <div class="sp-tile"><span>Opening balance</span><b id="ma-t-open">₹0</b></div>
+                            <div class="sp-tile"><span>Income</span><b id="ma-t-in">₹0</b></div>
+                            <div class="sp-tile amber"><span>Expenses</span><b id="ma-t-out">₹0</b></div>
+                            <div class="sp-tile"><span>Closing balance</span><b id="ma-t-close">₹0</b></div>
+                        </div>
+
+                        <h3 class="mb-15" style="font-size:20px">Income</h3>
+                        <div class="sp-table-wrap"><table class="sp-table" id="ma-income">
+                            <thead><tr><th style="width:34%">Item</th><th style="width:20%" class="text-end">Amount (₹)</th><th>Note</th><th class="sp-no-print" style="width:44px"></th></tr></thead>
+                            <tbody></tbody>
+                            <tfoot><tr><td>Total income</td><td class="num" id="ma-sum-in">₹0</td><td colspan="2"></td></tr></tfoot>
+                        </table></div>
+                        <button type="button" class="sp-btn sp-btn--ghost sp-btn--sm mt-10 sp-no-print" data-add="ma-income"><i class="fa-solid fa-plus"></i> Add income row</button>
+
+                        <h3 class="mb-15 mt-40" style="font-size:20px">Expenses</h3>
+                        <div class="sp-table-wrap"><table class="sp-table" id="ma-expense">
+                            <thead><tr><th style="width:34%">Item</th><th style="width:20%" class="text-end">Amount (₹)</th><th>Note</th><th class="sp-no-print" style="width:44px"></th></tr></thead>
+                            <tbody></tbody>
+                            <tfoot><tr><td>Total expenses</td><td class="num" id="ma-sum-out">₹0</td><td colspan="2"></td></tr></tfoot>
+                        </table></div>
+                        <button type="button" class="sp-btn sp-btn--ghost sp-btn--sm mt-10 sp-no-print" data-add="ma-expense"><i class="fa-solid fa-plus"></i> Add expense row</button>
+                        <p class="sp-ui-muted mt-30 d-none d-print-block">Prepared with the free SocietalPro accounts template · societalpro.com</p>
+                    </div>
+
+                    <div class="sp-actions mt-40 sp-no-print">
+                        <button type="button" class="sp-btn" id="ma-printbtn"><i class="fa-solid fa-print"></i> Print / save as PDF</button>
+                        <button type="button" class="sp-btn sp-btn--ghost" id="ma-csv"><i class="fa-solid fa-download"></i> Download CSV</button>
+                        <button type="button" class="sp-btn sp-btn--ghost" id="ma-reset"><i class="fa-solid fa-rotate-left"></i> Reset</button>
+                    </div>
+                    <p class="sp-ui-muted mt-15 sp-no-print">Your entries are saved in this browser only, so you can come back later.</p>
+                </div>
+{{toolFooter:monthly-accounts|Reports that build themselves.|With SocietalPro, every payment and expense already carries its note, so the monthly report is ready for members without retyping anything.}}
+            </div>
+        </section>

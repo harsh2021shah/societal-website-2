@@ -1,0 +1,37 @@
+<!--{ "out": "free-tools/maintenance-split/index.html", "nav": "tools", "title": "Maintenance Split Calculator", "description": "Free maintenance split calculator for housing societies. Work out a fair per-flat amount, split equally or by carpet area.", "scripts": ["tools.js"] }-->
+{{toolHero:maintenance-split}}
+
+        <section class="pt-40">
+            <div class="container">
+                <div class="sp-tool-shell" id="tool-split">
+                    <div class="row mt-none-30">
+                        <div class="col-lg-6 mt-30">
+                            <div class="sp-field">
+                                <span class="sp-label">Split method</span>
+                                <div class="sp-seg" id="ms-mode"><button type="button" class="on" data-mode="equal">Equal per flat</button><button type="button" data-mode="area">By carpet area</button></div>
+                            </div>
+                            <div class="sp-field"><label for="ms-total">Total monthly amount to collect</label><div class="sp-input-group"><span class="prefix">₹</span><input id="ms-total" type="number" min="0" inputmode="decimal" value="150000"></div><span class="hint">Include salaries, electricity, AMCs, housekeeping, repairs and fund contributions.</span></div>
+                            <div class="sp-field" data-show="equal"><label for="ms-flats">Number of flats</label><input id="ms-flats" type="number" min="1" inputmode="numeric" value="60"></div>
+                            <div data-show="area" hidden>
+                                <div class="sp-field"><label for="ms-area-total">Total carpet area of all flats (sq ft)</label><input id="ms-area-total" type="number" min="1" inputmode="decimal" value="54000"></div>
+                                <div class="sp-field"><label for="ms-area-flat">Your flat’s carpet area (sq ft)</label><input id="ms-area-flat" type="number" min="0" inputmode="decimal" value="850"></div>
+                            </div>
+                            <div class="sp-field"><label for="ms-round">Round each share</label>
+                                <select id="ms-round"><option value="1">To the nearest ₹1</option><option value="10" selected>Up to the nearest ₹10</option><option value="50">Up to the nearest ₹50</option><option value="100">Up to the nearest ₹100</option></select>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 mt-30">
+                            <div class="sp-result" aria-live="polite">
+                                <div class="sp-result-label" id="ms-label">Per flat, per month</div>
+                                <div class="sp-result-big" id="ms-out">₹2,500</div>
+                                <div class="sp-result-sub" id="ms-sub"></div>
+                                <div class="sp-result-rows" id="ms-rows"></div>
+                                <div class="sp-copybox" id="ms-msg"></div>
+                                <div class="sp-actions"><button type="button" class="sp-btn sp-btn--sm" id="ms-copy"><i class="fa-regular fa-copy"></i> Copy message</button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+{{toolFooter:maintenance-split|Collect it online, with notes.|Residents pay their share online and every payment carries a note, so the monthly report writes itself.}}
+            </div>
+        </section>

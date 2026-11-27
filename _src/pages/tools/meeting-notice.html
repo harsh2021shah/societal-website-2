@@ -1,0 +1,50 @@
+<!--{ "out": "free-tools/meeting-notice/index.html", "nav": "tools", "title": "Meeting Notice & Minutes Generator", "description": "Free meeting notice and minutes generator for housing societies. Create a clear AGM, SGM or committee meeting notice and minutes, ready to print or share.", "scripts": ["tools.js"] }-->
+{{toolHero:meeting-notice}}
+
+        <section class="pt-40">
+            <div class="container">
+                <div class="sp-tool-shell" id="tool-notice">
+                    <div class="sp-field sp-no-print">
+                        <div class="sp-seg" id="mn-tab"><button type="button" class="on" data-tab="notice">Meeting notice</button><button type="button" data-tab="minutes">Minutes</button></div>
+                    </div>
+                    <div class="row mt-none-30">
+                        <div class="col-lg-5 mt-30 sp-no-print">
+                            <div class="sp-field"><label for="mn-soc">Society name</label><input id="mn-soc" type="text" value="Green Park Co-operative Housing Society Ltd."></div>
+                            <div class="sp-field"><label for="mn-reg">Registration no. &amp; address (optional)</label><input id="mn-reg" type="text" placeholder="Reg. No. XXXX · Address, City"></div>
+                            <div class="sp-field"><label for="mn-type">Meeting type</label>
+                                <select id="mn-type"><option>Annual General Meeting</option><option>Special General Meeting</option><option>Managing Committee Meeting</option></select></div>
+                            <div class="row">
+                                <div class="col-sm-6"><div class="sp-field"><label for="mn-date">Date</label><input id="mn-date" type="date"></div></div>
+                                <div class="col-sm-6"><div class="sp-field"><label for="mn-time">Time</label><input id="mn-time" type="time" value="11:00"></div></div>
+                            </div>
+                            <div class="sp-field"><label for="mn-venue">Venue</label><input id="mn-venue" type="text" value="Society clubhouse"></div>
+                            <div class="sp-field"><label for="mn-agenda">Agenda (one item per line)</label><textarea id="mn-agenda" rows="6">To read and confirm the minutes of the previous meeting
+To approve the audited accounts for the year
+To discuss the lift AMC renewal
+To approve the repair budget for the coming year
+Any other matter with the permission of the chair</textarea></div>
+                            <div data-tab-show="minutes" hidden>
+                                <div class="row">
+                                    <div class="col-sm-6"><div class="sp-field"><label for="mn-chair">Chaired by</label><input id="mn-chair" type="text" placeholder="Name"></div></div>
+                                    <div class="col-sm-6"><div class="sp-field"><label for="mn-present">Members present</label><input id="mn-present" type="number" min="0" placeholder="42"></div></div>
+                                </div>
+                                <div class="sp-field"><label for="mn-quorum">Quorum</label><select id="mn-quorum"><option value="yes">Quorum was present</option><option value="no">Quorum was not present; meeting adjourned</option></select></div>
+                                <div class="sp-field"><label for="mn-decisions">Decision for each agenda item (one per line, same order)</label><textarea id="mn-decisions" rows="6" placeholder="Minutes of the previous meeting were read and confirmed.&#10;Audited accounts approved unanimously.&#10;Lift AMC renewed with current vendor (31 for, 11 against).&#10;Repair budget of ₹4,00,000 approved.&#10;No other matters."></textarea></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6"><div class="sp-field"><label for="mn-by">Issued by (name)</label><input id="mn-by" type="text" placeholder="Name"></div></div>
+                                <div class="col-sm-6"><div class="sp-field"><label for="mn-role">Designation</label><input id="mn-role" type="text" value="Hon. Secretary"></div></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-7 mt-30">
+                            <div class="sp-doc sp-printable" id="mn-doc" aria-live="polite"></div>
+                            <div class="sp-actions sp-no-print">
+                                <button type="button" class="sp-btn" id="mn-print"><i class="fa-solid fa-print"></i> Print / save as PDF</button>
+                                <button type="button" class="sp-btn sp-btn--ghost" id="mn-copy"><i class="fa-regular fa-copy"></i> Copy text</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+{{toolFooter:meeting-notice|Notices and decisions, on record.|SocietalPro shares notices with every resident, runs the vote, and keeps the decision with its context for whoever serves next.}}
+            </div>
+        </section>

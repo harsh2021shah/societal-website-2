@@ -1,0 +1,36 @@
+<!--{ "out": "free-tools/late-fee/index.html", "nav": "tools", "title": "Late Fee Calculator", "description": "Free late fee calculator for housing society dues. Estimate simple interest on overdue maintenance and get a polite reminder message.", "scripts": ["tools.js"] }-->
+{{toolHero:late-fee}}
+
+        <section class="pt-40">
+            <div class="container">
+                <div class="sp-tool-shell" id="tool-late">
+                    <div class="row mt-none-30">
+                        <div class="col-lg-6 mt-30">
+                            <div class="sp-field"><label for="lf-amt">Overdue amount</label><div class="sp-input-group"><span class="prefix">₹</span><input id="lf-amt" type="number" min="0" inputmode="decimal" value="2500"></div></div>
+                            <div class="row">
+                                <div class="col-sm-6"><div class="sp-field"><label for="lf-due">Due date</label><input id="lf-due" type="date"></div></div>
+                                <div class="col-sm-6"><div class="sp-field"><label for="lf-paid">Calculate up to</label><input id="lf-paid" type="date"></div></div>
+                            </div>
+                            <div class="sp-field"><label for="lf-rate">Interest rate (% per year)</label><input id="lf-rate" type="number" min="0" max="100" step="0.5" inputmode="decimal" value="18"><span class="hint">Use the rate in your bye-laws or general body resolution. Many societies use simple interest.</span></div>
+                            <div class="sp-field"><label for="lf-grace">Grace period (days)</label><input id="lf-grace" type="number" min="0" inputmode="numeric" value="0"></div>
+                            <div class="row">
+                                <div class="col-sm-6"><div class="sp-field"><label for="lf-flat">Flat (optional)</label><input id="lf-flat" type="text" placeholder="B-204"></div></div>
+                                <div class="col-sm-6"><div class="sp-field"><label for="lf-for">Dues for (optional)</label><input id="lf-for" type="text" placeholder="October maintenance"></div></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 mt-30">
+                            <div class="sp-result" aria-live="polite">
+                                <div class="sp-result-label">Estimated late fee</div>
+                                <div class="sp-result-big" id="lf-out">₹0</div>
+                                <div class="sp-result-sub" id="lf-sub"></div>
+                                <div class="sp-result-rows" id="lf-rows"></div>
+                                <div class="sp-label mt-20 mb-0">A polite, private reminder</div>
+                                <div class="sp-copybox" id="lf-msg"></div>
+                                <div class="sp-actions"><button type="button" class="sp-btn sp-btn--sm" id="lf-copy"><i class="fa-regular fa-copy"></i> Copy reminder</button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+{{toolFooter:late-fee|Reminders that stay polite and private.|SocietalPro sends friendly payment reminders and updates on WhatsApp, so nobody has to chase neighbours in the group chat.}}
+            </div>
+        </section>

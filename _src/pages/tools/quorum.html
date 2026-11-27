@@ -1,0 +1,52 @@
+<!--{ "out": "free-tools/quorum/index.html", "nav": "tools", "title": "Voting Quorum Calculator", "description": "Free voting quorum calculator for housing society meetings. Check whether quorum is met and whether a resolution passes by simple, two-thirds or three-quarters majority.", "scripts": ["tools.js"] }-->
+{{toolHero:quorum}}
+
+        <section class="pt-40">
+            <div class="container">
+                <div class="sp-tool-shell" id="tool-quorum">
+                    <div class="row mt-none-30">
+                        <div class="col-lg-6 mt-30">
+                            <h3 class="mb-20" style="font-size:20px">1. Is the meeting valid?</h3>
+                            <div class="sp-field"><label for="qc-members">Total members (one per flat)</label><input id="qc-members" type="number" min="1" inputmode="numeric" value="120"></div>
+                            <div class="sp-field"><label for="qc-rule">Quorum rule in your bye-laws</label>
+                                <select id="qc-rule">
+                                    <option value="lesser">A share of members or a fixed number, whichever is less</option>
+                                    <option value="pct">A share of members</option>
+                                    <option value="fixed">A fixed number of members</option>
+                                </select></div>
+                            <div class="row">
+                                <div class="col-sm-6" data-rule="pct lesser"><div class="sp-field"><label for="qc-pct">Share of members (%)</label><input id="qc-pct" type="number" min="1" max="100" step="0.01" value="66.67"><span class="hint">e.g. 66.67 for two-thirds</span></div></div>
+                                <div class="col-sm-6" data-rule="fixed lesser"><div class="sp-field"><label for="qc-fixed">Fixed number</label><input id="qc-fixed" type="number" min="1" value="20"></div></div>
+                            </div>
+                            <div class="sp-field"><label for="qc-present">Members present</label><input id="qc-present" type="number" min="0" inputmode="numeric" value="28"></div>
+
+                            <h3 class="mb-20 mt-30" style="font-size:20px">2. Does the resolution pass?</h3>
+                            <div class="row">
+                                <div class="col-4"><div class="sp-field"><label for="qc-for">For</label><input id="qc-for" type="number" min="0" value="19"></div></div>
+                                <div class="col-4"><div class="sp-field"><label for="qc-against">Against</label><input id="qc-against" type="number" min="0" value="7"></div></div>
+                                <div class="col-4"><div class="sp-field"><label for="qc-abstain">Abstain</label><input id="qc-abstain" type="number" min="0" value="2"></div></div>
+                            </div>
+                            <div class="sp-field"><label for="qc-maj">Majority required</label>
+                                <select id="qc-maj">
+                                    <option value="0.5">Simple majority of votes cast</option>
+                                    <option value="0.6667">Two-thirds of votes cast</option>
+                                    <option value="0.75">Three-quarters of votes cast</option>
+                                    <option value="present-0.6667">Two-thirds of members present</option>
+                                </select></div>
+                        </div>
+                        <div class="col-lg-6 mt-30">
+                            <div class="sp-result" aria-live="polite">
+                                <div class="sp-result-label">Quorum</div>
+                                <div class="sp-result-big" id="qc-q-out" style="font-size:40px"></div>
+                                <div class="sp-result-sub" id="qc-q-sub"></div>
+                                <div class="sp-result-label mt-30">Resolution</div>
+                                <div class="sp-result-big" id="qc-r-out" style="font-size:40px"></div>
+                                <div class="sp-result-sub" id="qc-r-sub"></div>
+                                <div class="sp-result-rows" id="qc-rows"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+{{toolFooter:quorum|Online voting, one flat, one vote.|SocietalPro runs votes with every flat, shows participation as it happens, and keeps the result on record.}}
+            </div>
+        </section>

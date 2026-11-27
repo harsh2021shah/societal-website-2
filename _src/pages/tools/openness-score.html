@@ -1,0 +1,39 @@
+<!--{ "out": "free-tools/openness-score/index.html", "nav": "tools", "title": "Society Openness Score", "description": "How open is your housing society? Answer 8 quick questions about payments, records, voting and reporting, and get a score with a practical plan.", "scripts": ["tools.js"] }-->
+{{toolHero:openness-score}}
+
+        <section class="pt-40">
+            <div class="container">
+                <div class="sp-tool-shell" id="tool-openness">
+                    <div id="oq-quiz">
+                        <div class="sp-quiz-progress"><span>Question <b id="oq-n">1</b> of <b id="oq-total">8</b></span><button type="button" class="sp-btn sp-btn--ghost sp-btn--sm" id="oq-back" disabled><i class="far fa-arrow-left"></i> Back</button></div>
+                        <div class="sp-bar"><span id="oq-bar" style="width:12.5%"></span></div>
+                        <h2 class="sp-quiz-q" id="oq-q"></h2>
+                        <p class="sp-quiz-help" id="oq-help"></p>
+                        <div class="sp-quiz-opts" id="oq-opts"></div>
+                    </div>
+                    <div id="oq-result" hidden>
+                        <div class="row mt-none-30 align-items-center">
+                            <div class="col-lg-5 mt-30 text-center">
+                                <div class="sp-score-ring">
+                                    <svg width="180" height="180" viewBox="0 0 180 180"><circle cx="90" cy="90" r="78" fill="none" stroke="#E3F4F1" stroke-width="16"/><circle id="oq-ring" cx="90" cy="90" r="78" fill="none" stroke="#0B7F70" stroke-width="16" stroke-linecap="round" stroke-dasharray="490" stroke-dashoffset="490" style="transition:stroke-dashoffset 1s ease"/></svg>
+                                    <div class="val"><div><span id="oq-score">0</span><small>out of 100</small></div></div>
+                                </div>
+                                <h3 id="oq-band" style="font-size:28px;font-weight:800;margin-top:10px"></h3>
+                                <p id="oq-band-text" class="mb-0"></p>
+                            </div>
+                            <div class="col-lg-7 mt-30">
+                                <div class="sp-result">
+                                    <div class="sp-result-label">Your plan for the next committee meeting</div>
+                                    <ul class="sp-plan list-unstyled mt-20" id="oq-plan"></ul>
+                                    <div class="sp-actions">
+                                        <button type="button" class="sp-btn sp-btn--sm" id="oq-copy"><i class="fa-regular fa-copy"></i> Copy summary</button>
+                                        <button type="button" class="sp-btn sp-btn--ghost sp-btn--sm" id="oq-restart"><i class="fa-solid fa-rotate-left"></i> Start again</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+{{toolFooter:openness-score|Turn your plan into habits.|SocietalPro makes payment notes, monthly reports and recorded votes the default, which are the practices behind the Open Society badge.}}
+            </div>
+        </section>
